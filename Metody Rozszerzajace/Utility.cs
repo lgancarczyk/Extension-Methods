@@ -68,5 +68,27 @@ namespace Metody_Rozszerzajace
                 return Convert.ToDouble((table[(table.Length / 2) - 1] + table[(table.Length / 2)])) / 2;
             }
         }
+
+        public static bool Between<T>(this T number, T lower, T upper) 
+        {
+            try
+            {
+                double numberD, lowerD, upperD;
+                numberD = Convert.ToDouble(number);
+                lowerD = Convert.ToDouble(lower);
+                upperD = Convert.ToDouble(upper);
+                if (numberD <= upperD && numberD >= lowerD)
+                {
+                    return true;
+                }
+                return false;
+            }
+            catch (Exception)
+            {
+
+                return false;
+            }
+            
+        }
     }
 }

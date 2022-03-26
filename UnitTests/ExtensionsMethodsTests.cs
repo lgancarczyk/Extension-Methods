@@ -6,29 +6,7 @@ using System.IO;
 
 namespace UnitTests
 {
-    public class ConsoleRedirectionToStringWriter : IDisposable
-    {
-        private StringWriter stringWriter;
-        private TextWriter originalOutput;
 
-        public ConsoleRedirectionToStringWriter()
-        {
-            stringWriter = new StringWriter();
-            originalOutput = Console.Out;
-            Console.SetOut(stringWriter);
-        }
-
-        public string GetOutput()
-        {
-            return stringWriter.ToString();
-        }
-
-        public void Dispose()
-        {
-            Console.SetOut(originalOutput);
-            stringWriter.Dispose();
-        }
-    }
     [TestClass]
     public class ExtensionsMethodsTests
     {
@@ -61,6 +39,8 @@ namespace UnitTests
             //Console.WriteLine(list.Dump());
             Assert.AreEqual("0, 1, 2, 3, 4", list.Dump(), "Result should be equal");
         }
+
+        
 
     }
 }

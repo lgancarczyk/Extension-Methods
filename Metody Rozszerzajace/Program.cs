@@ -7,10 +7,9 @@ namespace Metody_Rozszerzajace
     {
         static void Main(string[] args)
         {
-            IEnumerable<string> enumerable = new string[] { "A", "B", "C" };
-            enumerable.PrintLn();
-            IEnumerable<int> enumerableint = new int[] { 1, 2, 3 };
-            enumerableint.PrintLn();
+            //int[] table = new int[] { 1, 2, 3, 4, 5, 6, 7, 8 ,9 };
+            int[] table = new int[] { 4, 2, 6, 1, 3, 5};
+            Console.WriteLine(table.Median());
 
         }
     }

@@ -55,5 +55,18 @@ namespace Metody_Rozszerzajace
                 Console.WriteLine(s);
             }
         }
+
+        public static double Median(this int[] table) 
+        {
+            Array.Sort(table);
+            if (table.Length % 2 == 1)
+            {
+                return table[table.Length / 2];
+            }
+            else
+            {
+                return Convert.ToDouble((table[(table.Length / 2) - 1] + table[(table.Length / 2)])) / 2;
+            }
+        }
     }
 }

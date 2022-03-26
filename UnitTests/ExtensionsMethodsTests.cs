@@ -1,5 +1,6 @@
 using Metody_Rozszerzajace;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Collections.Generic;
 
 namespace UnitTests
 {
@@ -26,6 +27,14 @@ namespace UnitTests
         {
             string str = "20.01";
             Assert.AreEqual(false, str.IsNumeric(), "Result should be false");
+        }
+
+        [TestMethod]
+        public void ToStringTest()
+        {
+            var list = new List<int> { 0, 1, 2, 3, 4 };
+            //Console.WriteLine(list.Dump());
+            Assert.AreEqual("0, 1, 2, 3, 4", list.Dump(), "Result should be equal");
         }
     }
 }

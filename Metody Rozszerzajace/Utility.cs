@@ -30,5 +30,20 @@ namespace Metody_Rozszerzajace
                 return false;
             }
         }
+
+        public static string Dump(this List<int> list) 
+        {
+            string str = "";
+            foreach (var item in list)
+            {
+                str = str + item.ToString() + ", ";
+            }
+            // remove coma and space
+            for (int i = 0; i < 2; i++)
+            {
+                str = str.Remove(str.Length - 1);
+            }
+            return str;
+        }
     }
 }

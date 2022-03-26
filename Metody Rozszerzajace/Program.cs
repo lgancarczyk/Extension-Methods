@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Metody_Rozszerzajace
 {
@@ -6,8 +7,8 @@ namespace Metody_Rozszerzajace
     {
         static void Main(string[] args)
         {
-            string str = "-20";
-            Console.WriteLine(str.IsNumeric());
+            var list = new List<int> { 0, 1, 2, 3, 4 };
+            Console.WriteLine(list.Dump());
         }
     }
 }

@@ -17,5 +17,18 @@ namespace Metody_Rozszerzajace
             }
             return str;
         }
+
+        public static bool IsNumeric(this string str) 
+        {
+            try
+            {
+                Int32.Parse(str);
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
     }
 }

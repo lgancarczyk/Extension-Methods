@@ -6,8 +6,8 @@ namespace Metody_Rozszerzajace
     {
         static void Main(string[] args)
         {
-            string napis = "testowe wejscie";
-            Console.WriteLine(napis.WithoutVowels());
+            string str = "-20";
+            Console.WriteLine(str.IsNumeric());
         }
     }
 }

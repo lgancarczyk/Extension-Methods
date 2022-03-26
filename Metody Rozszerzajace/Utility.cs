@@ -45,5 +45,15 @@ namespace Metody_Rozszerzajace
             }
             return str;
         }
+
+        public static void PrintLn<T>(this IEnumerable<T> enumerable) 
+        {
+            IEnumerator<T> enumerator = enumerable.GetEnumerator();
+            while (enumerator.MoveNext())
+            {
+                T s = enumerator.Current;
+                Console.WriteLine(s);
+            }
+        }
     }
 }

@@ -7,8 +7,11 @@ namespace Metody_Rozszerzajace
     {
         static void Main(string[] args)
         {
-            var list = new List<int> { 0, 1, 2, 3, 4 };
-            Console.WriteLine(list.Dump());
+            IEnumerable<string> enumerable = new string[] { "A", "B", "C" };
+            enumerable.PrintLn();
+            IEnumerable<int> enumerableint = new int[] { 1, 2, 3 };
+            enumerableint.PrintLn();
+
         }
     }
 }
